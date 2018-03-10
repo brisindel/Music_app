@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/detail_item_image"
         android:layout_width="60dp"
-        android:layout_height="60dp"></ImageView>
+        android:layout_height="60dp"/>
 
     <TextView
         android:id="@+id/detail_song_title"
@@ -18,7 +18,7 @@
         android:layout_alignEnd="@+id/detail_song_length"
         android:layout_alignRight="@+id/detail_song_length"
         android:layout_marginTop="5px"
-        android:layout_toRightOf="@id/detail_item_image"></TextView>
+        android:layout_toRightOf="@id/detail_item_image"/>
 
     <TextView
         android:id="@+id/detail_song_album"
@@ -28,7 +28,7 @@
         android:layout_alignRight="@+id/detail_song_length"
         android:layout_below="@id/detail_song_title"
         android:layout_marginTop="5px"
-        android:layout_toRightOf="@id/detail_item_image"></TextView>
+        android:layout_toRightOf="@id/detail_item_image"/>
 
     <TextView
         android:id="@+id/detail_song_author"
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/detail_song_album"
         android:layout_marginTop="5px"
-        android:layout_toRightOf="@id/detail_item_image"></TextView>
+        android:layout_toRightOf="@id/detail_item_image"/>
 
     <TextView
         android:id="@+id/detail_song_length"
@@ -47,7 +47,7 @@
         android:layout_marginEnd="23dp"
         android:layout_marginRight="23dp"
         android:layout_toLeftOf="@+id/play"
-        android:layout_toStartOf="@+id/play"></TextView>
+        android:layout_toStartOf="@+id/play"/>
 
     <ImageView
         android:id="@+id/play"
@@ -55,6 +55,6 @@
         android:layout_height="30dp"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:src="@drawable/playstop"></ImageView>
+        android:src="@drawable/playstop"/>
 
 </RelativeLayout>

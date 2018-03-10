@@ -1,54 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="9"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
         android:orientation="vertical"
         >
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="100dp"
             android:layout_weight="1"
-
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/artist"/>
 
         <RatingBar
+            android:id="@+id/ratingBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:numStars="5"
             android:progressTint="@color/yellow"
             android:progressBackgroundTint="@color/gray"
             android:secondaryProgressTint="@color/white"
-            android:text="Song" />
+            />
 
         <TextView
+            android:id="@+id/song_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:text="Song" />
 
         <TextView
+            android:id="@+id/album_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:text="Album" />
 
         <TextView
+            android:id="@+id/author_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="Song" />
-
+            android:text="@string/author" />
 
     </LinearLayout>
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:backgroundTint="@color/white"
+        android:indeterminate="true"
+        android:max="200"
+        android:progress="1"
+        android:progressBackgroundTint="@color/gray"
+        android:progressTint="@color/yellow"
+        android:secondaryProgressTint="@color/white" />
 
     <LinearLayout
         android:layout_width="match_parent"
