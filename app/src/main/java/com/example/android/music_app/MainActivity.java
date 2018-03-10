@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> a, View v, int position,
                                     long id) {
                 // Create a new intent to open the {@link FamilyActivity}
-                Intent familyIntent = new Intent(MainActivity.this, MusicDetailMain.class);
+                Intent familyIntent = new Intent(MainActivity.this, SongsDetailMain.class);
 
                 // Start the new activity
                 startActivity(familyIntent);

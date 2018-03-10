@@ -68,4 +68,6 @@ public class MusicCategoryAdapter extends ArrayAdapter<MusicCategory> {
         return gridItemView;
     }
 
+
+
 }

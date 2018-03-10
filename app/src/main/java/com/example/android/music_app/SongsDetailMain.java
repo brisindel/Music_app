@@ -58,11 +58,13 @@ public class SongsDetailMain extends AppCompatActivity {
 
                 TextView songName = findViewById(R.id.detail_song_title);
                 TextView albumName = findViewById(R.id.detail_song_album);
-                Intent intent = new Intent(SongsDetailMain.this, NowPlay.class);
-                String name = songName.getText().toString();
-                String album = albumName.getText().toString();
-                intent.putExtra("song_name", name);
-                intent.putExtra("song_album", album);
+
+                Intent intent = new Intent(getApplicationContext(), NowPlay.class);
+
+//                String name = songName.getText().toString();
+  //              String album = albumName.getText().toString();
+    //            intent.putExtra("song_name", name);
+      //          intent.putExtra("song_album", album);
 
                 // Start the new activity
                 startActivity(intent);

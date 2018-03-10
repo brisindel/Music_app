@@ -6,8 +6,10 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -79,24 +81,10 @@ public class SongDetailAdapter extends ArrayAdapter<SongDetail> {
         TextView lengthTextView = (TextView) listItemView.findViewById(R.id.detail_song_length);
         lengthTextView.setText(songDetail.getSongLength());
 
-        ImageView playButton = (ImageView) listItemView.findViewById(R.id.play);
-
-        // Set a click listener on that View
-        playButton.setOnClickListener(new View.OnClickListener() {
-            // The code in this method will be executed when the family category is clicked on.
-            @Override
-            public void onClick(View view) {
-                // Create a new intent to open the {@link FamilyActivity}
-                Intent nowPlay = new Intent(context, NowPlay.class);
-
-                // Start the new activity
-                context.startActivity(nowPlay);
-            }
-        });
-
-        // Return the whole list item layout (containing 2 TextViews and an ImageView)
+             // Return the whole list item layout (containing 2 TextViews and an ImageView)
         // so that it can be shown in the ListView
         return listItemView;
+
     }
 
 }
