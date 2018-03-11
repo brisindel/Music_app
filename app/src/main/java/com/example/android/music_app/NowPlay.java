@@ -1,9 +1,8 @@
 package com.example.android.music_app;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RatingBar;
@@ -12,8 +11,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class NowPlay extends AppCompatActivity {
-
-    String rating = "0";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,26 +25,26 @@ public class NowPlay extends AppCompatActivity {
         **/
 
         Intent intent = getIntent();
-     //   final ImageView image = intent.getDrawingCa("image");
+        final int image = intent.getIntExtra("song_image");
         final String songName = intent.getStringExtra("song_name");
         final String albumName = intent.getStringExtra("song_album");
         final String length = intent.getStringExtra("song_length");
 
-       // ImageView image = findViewById(R.id.now_image);
+        ImageView image = findViewById(R.id.now_image);
         TextView name = findViewById(R.id.song_name);
         TextView album = findViewById(R.id.album_name);
         TextView tvThumb = findViewById(R.id.nowLengthEnd);
 
-      //  image.setImageBitmap(image);
+        image.setImageResource(image);
         name.setText(songName);
         album.setText(albumName);
-        tvThumb.setText(length);
+
 
         //After click on Play icon - change icon STOP, inicialize Seekbar
         final boolean[] nowplay = {false};
         final ImageView play = (ImageView) findViewById(R.id.nowPlay);
         final SeekBar seekBar = (SeekBar) findViewById(R.id.seekbar);
-
+        final TextView lengthStart = (TextView) findViewById(R.id.nowLengthStart);
 
         play.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +56,25 @@ public class NowPlay extends AppCompatActivity {
                     nowplay[0] = true;
 
                     seekBar.setIndeterminate(true);
+
+                    seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+                        int progressChangedValue = 0;
+
+                        public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                            progressChangedValue = progress;
+                            lengthStart.setText(progress);
+
+                        }
+
+                        public void onStartTrackingTouch(SeekBar seekBar) {
+                            // TODO Auto-generated method stub
+                        }
+
+                        public void onStopTrackingTouch(SeekBar seekBar) {
+                            Toast.makeText(NowPlay.this, "Seek bar progress is :" + progressChangedValue,
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    });
 
                 } else {
                     //Set image PLAY after click
@@ -96,7 +112,6 @@ public class NowPlay extends AppCompatActivity {
         });
 
         //Rating bar intent
-
         RatingBar ratingBar = (RatingBar) findViewById(R.id.nowRatingBar);
 
         ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {

@@ -50,16 +50,23 @@ public class SongsDetailMain extends AppCompatActivity {
                 // Create a new intent to open the {@link FamilyActivity}
                 Intent intent = new Intent(SongsDetailMain.this, NowPlay.class);
 
-                TextView songName = (TextView) findViewById(R.id.detail_song_title);
-                TextView albumName = (TextView) findViewById(R.id.detail_song_album);
-                TextView lengthSong = (TextView) findViewById(R.id.detail_song_length);
+//                TextView songName = (TextView) findViewById(R.id.detail_song_title);
+//                TextView albumName = (TextView) findViewById(R.id.detail_song_album);
+//                TextView lengthSong = (TextView) findViewById(R.id.detail_song_length);
+//
+//                String name = songName.getText().toString();
+//                String album = albumName.getText().toString();
+//                String length = lengthSong.getText().toString();
 
-                String name = songName.getText().toString();
-                String album = albumName.getText().toString();
-                String length = lengthSong.getText().toString();
+                SongDetail selectedSong = songsDetail.get(position);
+                int image = selectedSong.getImageSongId();
+                String name = selectedSong.getSongTitle();
+                String album = selectedSong.getSongAlbum();
+                String length = selectedSong.getSongLength();
                 intent.putExtra("song_name", name);
                 intent.putExtra("song_album", album);
                 intent.putExtra("song_length", length);
+                intent.putExtra("song_image", image);
 
                 // Start the new activity
                 startActivity(intent);
@@ -67,7 +74,6 @@ public class SongsDetailMain extends AppCompatActivity {
         });
 
         //Set rating from NowPlay
-
         Intent intent = getIntent();
 
         RatingBar nowRatingBar = findViewById(R.id.songRating);

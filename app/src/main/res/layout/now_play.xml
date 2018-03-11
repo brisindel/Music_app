@@ -59,7 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/seekbar"
-            android:text="0:00" />
+            android:hint="0:00" />
 
         <SeekBar
             android:id="@+id/seekbar"
@@ -67,8 +67,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
-            android:max="200"
-            android:progress="1"
             android:progressBackgroundTint="@color/gray"
             android:progressTint="@color/yellow"
             android:secondaryProgressTint="@color/white" />
