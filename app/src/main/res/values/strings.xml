@@ -1,4 +1,9 @@
 <resources>
-    <string name="app_name">Favorite music</string>
+    <string name="app_name">My favorite music</string>
+    <string name="category">Welcome in favorite music app!</string>
+    <string name="album">Albums</string>
+    <string name="songs">Songs</string>
+    <string name="boy">Boy</string>
     <string name="author">U2</string>
+    <string name="nowplay">Enjoy your song</string>
 </resources>

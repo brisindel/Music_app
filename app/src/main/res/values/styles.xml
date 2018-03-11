@@ -6,14 +6,35 @@
         <item name="colorPrimaryDark">@color/primary_dark_color</item>
     </style>
 
-    <!-- Style for a category of vocabulary words -->
-    <style name="CategoryStyle">
+    <!-- Category song text -->
+    <style name="CategorySongText" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/list_item_height</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:padding">16dp</item>
-        <item name="android:textColor">@android:color/white</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">5px</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ems">3</item>
+        <item name="android:ellipsize">end</item>
     </style>
+
+    <!-- Now play text -->
+    <style name="NowPlayText" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <!-- Now play buttons -->
+    <style name="NowPlayButtons" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <!-- Rating bar in detail songs -->
+
+    <style name="customRatingBar" parent="android:style/Widget.Material.RatingBar.Small">
+
+    </style>
+
+
 </resources>

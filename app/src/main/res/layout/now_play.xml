@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
@@ -10,97 +9,103 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="5"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <ImageView
+            android:id="@+id/now_image"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/artist"/>
+            android:layout_weight="1"
+            />
 
         <RatingBar
-            android:id="@+id/ratingBar"
+            android:id="@+id/nowRatingBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:progressTint="@color/yellow"
+            android:progress="1"
             android:progressBackgroundTint="@color/gray"
-            android:secondaryProgressTint="@color/white"
-            />
+            android:progressTint="@color/yellow"
+            android:secondaryProgressTint="@color/white" />
 
         <TextView
             android:id="@+id/song_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
+            style="@style/NowPlayText"
             android:text="Song" />
 
         <TextView
             android:id="@+id/album_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
+            style="@style/NowPlayText"
             android:text="Album" />
 
         <TextView
             android:id="@+id/author_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
+            style="@style/NowPlayText"
             android:text="@string/author" />
 
     </LinearLayout>
 
-    <SeekBar
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:backgroundTint="@color/white"
-        android:indeterminate="true"
-        android:max="200"
-        android:progress="1"
-        android:progressBackgroundTint="@color/gray"
-        android:progressTint="@color/yellow"
-        android:secondaryProgressTint="@color/white" />
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:id="@+id/nowLengthStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seekbar"
+            android:text="0:00" />
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:max="200"
+            android:progress="1"
+            android:progressBackgroundTint="@color/gray"
+            android:progressTint="@color/yellow"
+            android:secondaryProgressTint="@color/white" />
+
+        <TextView
+            android:id="@+id/nowLengthEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/seekbar"
+            android:text="0:00" />
+
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/playstop" />
+            android:id="@+id/nowPrevious"
+            style="@style/NowPlayButtons"
+            android:src="@drawable/previous" />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/playstop" />
+            android:id="@+id/nowPlay"
+            style="@style/NowPlayButtons"
+            android:src="@drawable/play" />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/playstop" />
+            android:id="@+id/nowNext"
+            style="@style/NowPlayButtons"
+            android:src="@drawable/next" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/playstop" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/playstop" />
     </LinearLayout>
 </LinearLayout>
 

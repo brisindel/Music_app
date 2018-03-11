@@ -9,34 +9,29 @@
     <ImageView
         android:id="@+id/detail_item_image"
         android:layout_width="60dp"
-        android:layout_height="60dp"/>
+        android:layout_height="60dp"
+        android:layout_marginRight="5dp"/>
 
     <TextView
         android:id="@+id/detail_song_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/detail_song_length"
-        android:layout_alignRight="@+id/detail_song_length"
-        android:layout_marginTop="5px"
-        android:layout_toRightOf="@id/detail_item_image"/>
+        style="@style/CategorySongText"
+        android:layout_alignEnd="@+id/songRating"
+        android:layout_alignRight="@+id/songRating"
+        android:layout_toRightOf="@id/detail_item_image" />
 
     <TextView
         android:id="@+id/detail_song_album"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/detail_song_length"
-        android:layout_alignRight="@+id/detail_song_length"
+        style="@style/CategorySongText"
+        android:layout_alignEnd="@+id/songRating"
+        android:layout_alignRight="@+id/songRating"
         android:layout_below="@id/detail_song_title"
-        android:layout_marginTop="5px"
-        android:layout_toRightOf="@id/detail_item_image"/>
+        android:layout_toRightOf="@id/detail_item_image" />
 
     <TextView
         android:id="@+id/detail_song_author"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/CategorySongText"
         android:layout_below="@id/detail_song_album"
-        android:layout_marginTop="5px"
-        android:layout_toRightOf="@id/detail_item_image"/>
+        android:layout_toRightOf="@id/detail_item_image" />
 
     <TextView
         android:id="@+id/detail_song_length"
@@ -46,8 +41,24 @@
         android:layout_below="@+id/detail_song_album"
         android:layout_marginEnd="23dp"
         android:layout_marginRight="23dp"
+        android:layout_toLeftOf="@+id/songRating"
+        android:layout_toStartOf="@+id/songRating" />
+
+    <RatingBar
+        android:id="@+id/songRating"
+        style="@style/customRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/detail_song_album"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
         android:layout_toLeftOf="@+id/play"
-        android:layout_toStartOf="@+id/play"/>
+        android:layout_toStartOf="@+id/play"
+        android:clickable="false"
+        android:numStars="5"
+        android:progressBackgroundTint="@color/gray"
+        android:progressTint="@color/yellow"
+        android:secondaryProgressTint="@color/white" />
 
     <ImageView
         android:id="@+id/play"
@@ -55,6 +66,6 @@
         android:layout_height="30dp"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:src="@drawable/playstop"/>
+        android:src="@drawable/playstop" />
 
 </RelativeLayout>

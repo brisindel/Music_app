@@ -67,7 +67,4 @@ public class MusicCategoryAdapter extends ArrayAdapter<MusicCategory> {
         // so that it can be shown in the ListView
         return gridItemView;
     }
-
-
-
 }
