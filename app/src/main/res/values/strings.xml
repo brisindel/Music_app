@@ -6,4 +6,8 @@
     <string name="boy">Boy</string>
     <string name="author">U2</string>
     <string name="nowplay">Enjoy your song</string>
+    <string name="song">Song</string>
+    <string name="Album">Album</string>
+    <string name="length">0:00</string>
+    <string name="testtext">TEST</string>
 </resources>

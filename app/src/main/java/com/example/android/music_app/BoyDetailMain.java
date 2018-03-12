@@ -1,17 +1,12 @@
 package com.example.android.music_app;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.RatingBar;
-import android.widget.TextView;
 
-import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 
 public class BoyDetailMain extends AppCompatActivity {
@@ -52,31 +47,20 @@ public class BoyDetailMain extends AppCompatActivity {
                 // Create a new intent to open the {@link FamilyActivity}
                 Intent intent = new Intent(BoyDetailMain.this, NowPlay.class);
 
-                TextView songName = (TextView) findViewById(R.id.detail_song_title);
-                TextView albumName = (TextView) findViewById(R.id.detail_song_album);
-                TextView lengthSong = (TextView) findViewById(R.id.detail_song_length);
-                ImageView imageView = (ImageView) findViewById(R.id.detail_item_image);
-
-                String name = songName.getText().toString();
-                String album = albumName.getText().toString();
-                String length = lengthSong.getText().toString();
-                Bitmap image = imageView.getDrawingCache();
+                SongDetail selectedSong = boyDetail.get(position);
+                int image = selectedSong.getImageSongId();
+                String name = selectedSong.getSongTitle();
+                String album = selectedSong.getSongAlbum();
+                String length = selectedSong.getSongLength();
                 intent.putExtra("song_name", name);
                 intent.putExtra("song_album", album);
                 intent.putExtra("song_length", length);
-                intent.putExtra("image", image);
+                intent.putExtra("song_image", image);
 
                 // Start the new activity
                 startActivity(intent);
             }
         });
-
-        //Set rating from NowPlay
-
-        Intent intent = getIntent();
-
-        RatingBar nowRatingBar = findViewById(R.id.songRating);
-        final String ratingValue = intent.getStringExtra("ratingValue");
 
     }
 }

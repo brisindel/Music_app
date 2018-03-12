@@ -2,11 +2,11 @@ package com.example.android.music_app;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(R.string.category);
 
         // Create an arrayList of words
         ArrayList<MusicCategory> musicCategories = new ArrayList<MusicCategory>();
@@ -28,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
         musicCategories.add(new MusicCategory(R.drawable.artist, "AnythingElse"));
         musicCategories.add(new MusicCategory(R.drawable.artist, "AnythingElse"));
         musicCategories.add(new MusicCategory(R.drawable.artist, "AnythingElse"));
-
 
         // Create adapter
         MusicCategoryAdapter itemsAdapter = new MusicCategoryAdapter(this, musicCategories);

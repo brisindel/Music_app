@@ -10,13 +10,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-/**
- * Created by uLeho on 05.03.2018.
- */
-
 public class MusicCategoryAdapter extends ArrayAdapter<MusicCategory> {
-
-    private static final String LOG_TAG = MusicCategoryAdapter.class.getSimpleName();
 
     /**
      * This is our own custom constructor (it doesn't mirror a superclass constructor).

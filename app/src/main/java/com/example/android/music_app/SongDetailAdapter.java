@@ -2,25 +2,17 @@ package com.example.android.music_app;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
-/**
- * Created by uLeho on 05.03.2018.
- */
-
 public class SongDetailAdapter extends ArrayAdapter<SongDetail> {
 
-    private static final String LOG_TAG = SongDetailAdapter.class.getSimpleName();
     private Context context;
 
     /**
@@ -28,7 +20,7 @@ public class SongDetailAdapter extends ArrayAdapter<SongDetail> {
      * The context is used to inflate the layout file, and the list is the data we want
      * to populate into the lists.
      *
-     * @param context         The current context. Used to inflate the layout file.
+     * @param context    The current context. Used to inflate the layout file.
      * @param songDetail A List of AndroidFlavor objects to display in a list
      */
     public SongDetailAdapter(Activity context, ArrayList<SongDetail> songDetail) {
@@ -81,7 +73,7 @@ public class SongDetailAdapter extends ArrayAdapter<SongDetail> {
         TextView lengthTextView = (TextView) listItemView.findViewById(R.id.detail_song_length);
         lengthTextView.setText(songDetail.getSongLength());
 
-             // Return the whole list item layout (containing 2 TextViews and an ImageView)
+        // Return the whole list item layout (containing 2 TextViews and an ImageView)
         // so that it can be shown in the ListView
         return listItemView;
 

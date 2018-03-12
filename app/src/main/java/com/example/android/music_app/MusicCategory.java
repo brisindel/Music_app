@@ -1,9 +1,5 @@
 package com.example.android.music_app;
 
-/**
- * Created by uLeho on 05.03.2018.
- */
-
 public class MusicCategory {
     // Drawable resource ID
     private int mImageResourceId;

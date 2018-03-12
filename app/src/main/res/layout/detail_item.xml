@@ -10,14 +10,17 @@
         android:id="@+id/detail_item_image"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginRight="5dp"/>
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/detail_song_title" />
 
     <TextView
         android:id="@+id/detail_song_title"
         style="@style/CategorySongText"
         android:layout_alignEnd="@+id/songRating"
         android:layout_alignRight="@+id/songRating"
-        android:layout_toRightOf="@id/detail_item_image" />
+        android:layout_toEndOf="@+id/detail_item_image"
+        android:layout_toRightOf="@+id/detail_item_image" />
 
     <TextView
         android:id="@+id/detail_song_album"
@@ -31,13 +34,16 @@
         android:id="@+id/detail_song_author"
         style="@style/CategorySongText"
         android:layout_below="@id/detail_song_album"
-        android:layout_toRightOf="@id/detail_item_image" />
+        android:layout_toEndOf="@+id/detail_item_image"
+        android:layout_toLeftOf="@+id/detail_song_length"
+        android:layout_toRightOf="@+id/detail_item_image"
+        android:layout_toStartOf="@+id/detail_song_length" />
 
     <TextView
         android:id="@+id/detail_song_length"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/detail_item_image"
+        android:layout_alignBottom="@+id/detail_song_author"
         android:layout_below="@+id/detail_song_album"
         android:layout_marginEnd="23dp"
         android:layout_marginRight="23dp"

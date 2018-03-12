@@ -1,18 +1,12 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/primary_color</item>
-        <item name="colorPrimaryDark">@color/primary_dark_color</item>
-    </style>
-
     <!-- Category song text -->
     <style name="CategorySongText" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">5px</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
         <item name="android:singleLine">true</item>
-        <item name="android:ems">3</item>
         <item name="android:ellipsize">end</item>
     </style>
 
@@ -35,6 +29,5 @@
     <style name="customRatingBar" parent="android:style/Widget.Material.RatingBar.Small">
 
     </style>
-
 
 </resources>

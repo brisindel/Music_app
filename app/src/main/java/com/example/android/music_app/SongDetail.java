@@ -1,9 +1,5 @@
 package com.example.android.music_app;
 
-/**
- * Created by uLeho on 06.03.2018.
- */
-
 public class SongDetail {
     // Drawable resource ID
     private int mImageSongId;
