@@ -17,10 +17,10 @@ public class SongDetail {
     private String mSongLength;
 
     /*
-    * Create a new MusicCategory object.
+    * Create a new MusicCategoryDetail object.
     *
-    * @param mImageResourceID is drawable reference ID that corresponds with MusicCategory
-    * @param mMusicCategory is list of MusicCategory
+    * @param mImageResourceID is drawable reference ID that corresponds with MusicCategoryDetail
+    * @param mMusicCategory is list of MusicCategoryDetail
     * */
     public SongDetail(int ImageSongId, String SongTitle, String SongAlbum, String SongAuthor, String SongLength) {
         mImageSongId = ImageSongId;

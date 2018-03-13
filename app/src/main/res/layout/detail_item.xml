@@ -17,16 +17,16 @@
     <TextView
         android:id="@+id/detail_song_title"
         style="@style/CategorySongText"
-        android:layout_alignEnd="@+id/songRating"
-        android:layout_alignRight="@+id/songRating"
+        android:layout_alignEnd="@+id/song_rating_bar"
+        android:layout_alignRight="@+id/song_rating_bar"
         android:layout_toEndOf="@+id/detail_item_image"
         android:layout_toRightOf="@+id/detail_item_image" />
 
     <TextView
         android:id="@+id/detail_song_album"
         style="@style/CategorySongText"
-        android:layout_alignEnd="@+id/songRating"
-        android:layout_alignRight="@+id/songRating"
+        android:layout_alignEnd="@+id/song_rating_bar"
+        android:layout_alignRight="@+id/song_rating_bar"
         android:layout_below="@id/detail_song_title"
         android:layout_toRightOf="@id/detail_item_image" />
 
@@ -47,19 +47,19 @@
         android:layout_below="@+id/detail_song_album"
         android:layout_marginEnd="23dp"
         android:layout_marginRight="23dp"
-        android:layout_toLeftOf="@+id/songRating"
-        android:layout_toStartOf="@+id/songRating" />
+        android:layout_toLeftOf="@+id/song_rating_bar"
+        android:layout_toStartOf="@+id/song_rating_bar" />
 
     <RatingBar
-        android:id="@+id/songRating"
+        android:id="@+id/song_rating_bar"
         style="@style/customRatingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/detail_song_album"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        android:layout_toLeftOf="@+id/play"
-        android:layout_toStartOf="@+id/play"
+        android:layout_toLeftOf="@+id/play_button"
+        android:layout_toStartOf="@+id/play_button"
         android:clickable="false"
         android:numStars="5"
         android:progressBackgroundTint="@color/gray"
@@ -67,7 +67,7 @@
         android:secondaryProgressTint="@color/white" />
 
     <ImageView
-        android:id="@+id/play"
+        android:id="@+id/play_button"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_alignParentRight="true"

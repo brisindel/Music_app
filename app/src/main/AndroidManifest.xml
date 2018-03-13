@@ -17,26 +17,26 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SongsDetailMain"
+            android:name=".SongsDetailActivity"
             android:label="@string/songs"
-            android:parentActivityName=".AlbumDetailMain">
+            android:parentActivityName=".AlbumDetailActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".AlbumDetailMain" />
+                android:value=".AlbumDetailActivity" />
         </activity>
         <activity
-            android:name=".BoyDetailMain"
+            android:name=".BoyDetailActivity"
             android:label="@string/boy"
-            android:parentActivityName=".AlbumDetailMain">
+            android:parentActivityName=".AlbumDetailActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".AlbumDetailMain" />
+                android:value=".AlbumDetailActivity" />
         </activity>
 
         <activity
-            android:name=".AlbumDetailMain"
+            android:name=".AlbumDetailActivity"
             android:label="@string/album"
             android:parentActivityName=".MainActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
@@ -45,9 +45,9 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
-            android:name=".NowPlay"
+            android:name=".NowPlayActivity"
             android:label="@string/nowplay"
-            android:parentActivityName=".SongsDetailMain">
+            android:parentActivityName=".SongsDetailActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

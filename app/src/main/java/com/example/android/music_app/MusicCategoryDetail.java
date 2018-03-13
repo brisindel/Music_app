@@ -1,6 +1,6 @@
 package com.example.android.music_app;
 
-public class MusicCategory {
+public class MusicCategoryDetail {
     // Drawable resource ID
     private int mImageResourceId;
 
@@ -8,12 +8,12 @@ public class MusicCategory {
     private String mMusicCategory;
 
     /*
-    * Create a new MusicCategory object.
+    * Create a new MusicCategoryDetail object.
     *
-    * @param mImageResourceID is drawable reference ID that corresponds with MusicCategory
-    * @param mMusicCategory is list of MusicCategory
+    * @param mImageResourceID is drawable reference ID that corresponds with MusicCategoryDetail
+    * @param mMusicCategory is list of MusicCategoryDetail
     * */
-    public MusicCategory(int imageResourceId, String vCategory) {
+    public MusicCategoryDetail(int imageResourceId, String vCategory) {
         mImageResourceId = imageResourceId;
         mMusicCategory = vCategory;
     }

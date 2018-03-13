@@ -20,41 +20,41 @@ public class MainActivity extends AppCompatActivity {
         actionBar.setTitle(R.string.category);
 
         // Create an arrayList of words
-        ArrayList<MusicCategory> musicCategories = new ArrayList<MusicCategory>();
-        musicCategories.add(new MusicCategory(R.drawable.artist, "Songs"));
-        musicCategories.add(new MusicCategory(R.drawable.artist, "Album"));
-        musicCategories.add(new MusicCategory(R.drawable.artist, "AnythingElse"));
-        musicCategories.add(new MusicCategory(R.drawable.artist, "AnythingElse"));
-        musicCategories.add(new MusicCategory(R.drawable.artist, "AnythingElse"));
-        musicCategories.add(new MusicCategory(R.drawable.artist, "AnythingElse"));
-        musicCategories.add(new MusicCategory(R.drawable.artist, "AnythingElse"));
-        musicCategories.add(new MusicCategory(R.drawable.artist, "AnythingElse"));
-        musicCategories.add(new MusicCategory(R.drawable.artist, "AnythingElse"));
+        ArrayList<MusicCategoryDetail> musicCategoryList = new ArrayList<MusicCategoryDetail>();
+        musicCategoryList.add(new MusicCategoryDetail(R.drawable.artist, "Songs"));
+        musicCategoryList.add(new MusicCategoryDetail(R.drawable.artist, "Album"));
+        musicCategoryList.add(new MusicCategoryDetail(R.drawable.artist, "AnythingElse"));
+        musicCategoryList.add(new MusicCategoryDetail(R.drawable.artist, "AnythingElse"));
+        musicCategoryList.add(new MusicCategoryDetail(R.drawable.artist, "AnythingElse"));
+        musicCategoryList.add(new MusicCategoryDetail(R.drawable.artist, "AnythingElse"));
+        musicCategoryList.add(new MusicCategoryDetail(R.drawable.artist, "AnythingElse"));
+        musicCategoryList.add(new MusicCategoryDetail(R.drawable.artist, "AnythingElse"));
+        musicCategoryList.add(new MusicCategoryDetail(R.drawable.artist, "AnythingElse"));
 
         // Create adapter
-        MusicCategoryAdapter itemsAdapter = new MusicCategoryAdapter(this, musicCategories);
+        MusicCategoryAdapter itemsAdapter = new MusicCategoryAdapter(this, musicCategoryList);
 
         // Find the object for arrayList
-        GridView gridView = (GridView) findViewById(R.id.grid_music);
+        GridView musicCategoryGridView = (GridView) findViewById(R.id.grid_music);
 
         // Set adapter on object of arrayList
-        gridView.setAdapter(itemsAdapter);
+        musicCategoryGridView.setAdapter(itemsAdapter);
 
         // Set a click listener on that View
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        musicCategoryGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> a, View v, int position,
                                     long id) {
                 Intent intent = null;
                 switch (position) {
                     case 0:
-                        intent = new Intent(getApplicationContext(), SongsDetailMain.class);
+                        intent = new Intent(getApplicationContext(), SongsDetailActivity.class);
                         break;
                     case 1:
-                        intent = new Intent(getApplicationContext(), AlbumDetailMain.class);
+                        intent = new Intent(getApplicationContext(), AlbumDetailActivity.class);
                         break;
                     default:
-                        intent = new Intent(getApplicationContext(), SongsDetailMain.class);
+                        intent = new Intent(getApplicationContext(), SongsDetailActivity.class);
                         break;
                 }
 

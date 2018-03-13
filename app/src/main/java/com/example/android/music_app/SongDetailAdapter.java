@@ -54,8 +54,8 @@ public class SongDetailAdapter extends ArrayAdapter<SongDetail> {
         SongDetail songDetail = getItem(position);
 
         // Find the ImageView in the list_item.xml layout with the ID list_item_icon
-        ImageView iconView = (ImageView) listItemView.findViewById(R.id.detail_item_image);
-        iconView.setImageResource(songDetail.getImageSongId());
+        ImageView iconImageView = (ImageView) listItemView.findViewById(R.id.detail_item_image);
+        iconImageView.setImageResource(songDetail.getImageSongId());
 
         // Find the TextView in the list_item.xml layout with the ID version_name
         TextView titleTextView = (TextView) listItemView.findViewById(R.id.detail_song_title);

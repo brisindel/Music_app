@@ -9,9 +9,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.Set;
-
-public class NowPlay extends AppCompatActivity {
+public class NowPlayActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,7 +71,7 @@ public class NowPlay extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(NowPlay.this,
+                Toast.makeText(NowPlayActivity.this,
                         "Play previous", Toast.LENGTH_LONG).show();
             }
         });
@@ -85,7 +83,7 @@ public class NowPlay extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(NowPlay.this,
+                Toast.makeText(NowPlayActivity.this,
                         "Play next", Toast.LENGTH_LONG).show();
 
             }
