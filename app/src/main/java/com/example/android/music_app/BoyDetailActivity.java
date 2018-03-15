@@ -18,17 +18,17 @@ public class BoyDetailActivity extends AppCompatActivity {
 
         // Create an arrayList of words
         final ArrayList<SongDetail> boyDetailList = new ArrayList<SongDetail>();
-        boyDetailList.add(new SongDetail(R.drawable.boy, "I Will Follow", "Boy", "U2", "3:40"));
-        boyDetailList.add(new SongDetail(R.drawable.boy, "Twilight", "Boy", "U2", "4:22"));
-        boyDetailList.add(new SongDetail(R.drawable.boy, "An Cat Dubh", "Boy", "U2", "4:46"));
-        boyDetailList.add(new SongDetail(R.drawable.boy, "Into the Heart", "Boy", "U2", "3:27"));
-        boyDetailList.add(new SongDetail(R.drawable.boy, "Out of Control", "Boy", "U2", "4:12"));
-        boyDetailList.add(new SongDetail(R.drawable.boy, "Stories for Boys", "Boy", "U2", "3:04"));
-        boyDetailList.add(new SongDetail(R.drawable.boy, "The Ocean", "Boy", "U2", "1:34"));
-        boyDetailList.add(new SongDetail(R.drawable.boy, "A Day Without Me", "Boy", "U2", "3:12"));
-        boyDetailList.add(new SongDetail(R.drawable.boy, "Another Time, Another Place", "Boy", "U2", "4:31"));
-        boyDetailList.add(new SongDetail(R.drawable.boy, "The Electric Co.", "Boy", "U2", "4:47"));
-        boyDetailList.add(new SongDetail(R.drawable.boy, "Shadows and Tall Trees", "Boy", "U2", "5:13"));
+        boyDetailList.add(new SongDetail(R.drawable.boy, "I Will Follow", "Boy", "U2", "3:40", R.raw.first));
+        boyDetailList.add(new SongDetail(R.drawable.boy, "Twilight", "Boy", "U2", "4:22", R.raw.second));
+        boyDetailList.add(new SongDetail(R.drawable.boy, "An Cat Dubh", "Boy", "U2", "4:46", R.raw.thirth));
+        boyDetailList.add(new SongDetail(R.drawable.boy, "Into the Heart", "Boy", "U2", "3:27", R.raw.forth));
+        boyDetailList.add(new SongDetail(R.drawable.boy, "Out of Control", "Boy", "U2", "4:12", R.raw.fifth));
+        boyDetailList.add(new SongDetail(R.drawable.boy, "Stories for Boys", "Boy", "U2", "3:04", R.raw.first));
+        boyDetailList.add(new SongDetail(R.drawable.boy, "The Ocean", "Boy", "U2", "1:34", R.raw.second));
+        boyDetailList.add(new SongDetail(R.drawable.boy, "A Day Without Me", "Boy", "U2", "3:12", R.raw.thirth));
+        boyDetailList.add(new SongDetail(R.drawable.boy, "Another Time, Another Place", "Boy", "U2", "4:31", R.raw.forth));
+        boyDetailList.add(new SongDetail(R.drawable.boy, "The Electric Co.", "Boy", "U2", "4:47", R.raw.fifth));
+        boyDetailList.add(new SongDetail(R.drawable.boy, "Shadows and Tall Trees", "Boy", "U2", "5:13", R.raw.first));
 
         // Create adapter
         SongDetailAdapter itemsAdapter = new SongDetailAdapter(this, boyDetailList);

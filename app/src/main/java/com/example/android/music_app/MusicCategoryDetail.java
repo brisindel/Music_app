@@ -26,7 +26,7 @@ public class MusicCategoryDetail {
     }
 
     /**
-     * Get the Android version number
+     * Get the Music category name
      */
     public String getMusicCategory() {
         return mMusicCategory;
